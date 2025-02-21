@@ -1,0 +1,118 @@
+---
+// @ts-ignore
+import {
+  FaMobileAlt,
+  FaTachometerAlt,
+  FaSearch,
+  FaCompass,
+  FaFileAlt,
+  FaLock,
+  FaChartLine,
+  FaShareAlt,
+  FaEnvelope,
+  FaShoppingCart,
+  FaNewspaper,
+  FaPaintBrush,
+} from "react-icons/fa";
+
+const features = [
+  {
+    title: "Diseño Responsivo",
+    description:
+      "Nos aseguramos de que tu sitio web se vea genial en todos los dispositivos, desde teléfonos móviles hasta computadoras de escritorio.",
+    icon: FaMobileAlt,
+  },
+  {
+    title: "Velocidad de Carga Rápida",
+    description:
+      "Optimizamos tu sitio web para que cargue rápidamente, proporcionando una mejor experiencia de usuario y mejorando el SEO.",
+    icon: FaTachometerAlt,
+  },
+  {
+    title: "Optimización SEO",
+    description:
+      "Implementamos las mejores prácticas para la optimización de motores de búsqueda y aumentamos la visibilidad de tu sitio web.",
+    icon: FaSearch,
+  },
+  {
+    title: "Navegación Amigable",
+    description:
+      "Diseñamos una navegación intuitiva para ayudar a los usuarios a encontrar lo que necesitan rápida y fácilmente.",
+    icon: FaCompass,
+  },
+  {
+    title: "Contenido de Alta Calidad",
+    description:
+      "Creamos contenido atractivo e informativo que resuene con tu audiencia.",
+    icon: FaFileAlt,
+  },
+  {
+    title: "Seguridad",
+    description:
+      "Implementamos medidas de seguridad para proteger tu sitio web y los datos de los usuarios contra amenazas.",
+    icon: FaLock,
+  },
+  {
+    title: "Integración de Analíticas",
+    description:
+      "Integramos herramientas de analíticas para rastrear el comportamiento de los usuarios y medir el rendimiento de tu sitio web.",
+    icon: FaChartLine,
+  },
+  {
+    title: "Integración con Redes Sociales",
+    description:
+      "Conectamos tu sitio web con plataformas de redes sociales para aumentar el compromiso y el alcance.",
+    icon: FaShareAlt,
+  },
+  {
+    title: "Formularios de Contacto",
+    description:
+      "Incluimos formularios de contacto para permitir que los usuarios se pongan en contacto contigo fácilmente.",
+    icon: FaEnvelope,
+  },
+  {
+    title: "Funcionalidad de Comercio Electrónico",
+    description:
+      "Agregamos funciones de comercio electrónico para vender productos o servicios directamente desde tu sitio web.",
+    icon: FaShoppingCart,
+  },
+  {
+    title: "Blog",
+    description:
+      "Creamos un blog para compartir noticias, actualizaciones y contenido valioso con tu audiencia.",
+    icon: FaNewspaper,
+  },
+  {
+    title: "Temas Personalizables",
+    description:
+      "Ofrecemos temas personalizables para permitir a los usuarios personalizar la apariencia de su sitio web.",
+    icon: FaPaintBrush,
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Todo lo que necesitas para llevar tu imagen a otro nivel
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Nosotros nos encargamos de todo, desde el diseño hasta la implementación,
+    para que puedas enfocarte en lo que realmente importa.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <item.icon className="text-white" />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

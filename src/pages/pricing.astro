@@ -1,0 +1,92 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Página para tu negocio",
+    price: {
+      monthly: "$5,000 MXN",
+      original: "$5,500 MXN",
+      monthlyMaintenance: "$1,500 MXN",
+    },
+    popular: false,
+    features: [
+      "Diseño profesional",
+      "Atractivo para clientes",
+      "Página simple y efectiva",
+      "Mantenimiento mensual",
+    ],
+    detail: "Ideal para pequeños negocios que quieren tener presencia en línea",
+    extra:
+      "La compra del paquete incluye 1 mes de mantenimiento gratis, los pagos del mantenimiento son mensuales y se realizan por adelantado. El costo del dominio no está incluido en el precio del mantenimiento.",
+    button: {
+      text: "Escoger Plan",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Página para promocionar eventos o productos",
+    price: {
+      monthly: "$6,000 MXN",
+      original: "$6,500 MXN",
+      monthlyMaintenance: "$1,800 MXN",
+    },
+    detail: "Ideal para eventos o productos que quieras promocionar en línea",
+    extra:
+      "La compra del paquete incluye 1 mes de mantenimiento gratis, los pagos del mantenimiento son mensuales y se realizan por adelantado. El costo del dominio no está incluido en el precio del mantenimiento.",
+    popular: true,
+    features: [
+      "Diseño atractivo",
+      "Fácil de navegar",
+      "Ideal para productos o eventos",
+      "Mantenimiento mensual",
+    ],
+    button: {
+      text: "Escoger Plan",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Portafolio para mostrar tu trabajo",
+    price: {
+      monthly: "$4,500 MXN",
+      original: "$5,000 MXN",
+      monthlyMaintenance: "$1,200 MXN",
+    },
+    detail:
+      "Ideal para artistas y creativos que quieren mostrar su trabajo en línea",
+    extra:
+      "La compra del paquete incluye 1 mes de mantenimiento gratis, los pagos del mantenimiento son mensuales y se realizan por adelantado. El costo del dominio no está incluido en el precio del mantenimiento.",
+    popular: false,
+    features: [
+      "Diseño personalizado",
+      "Destaca tu trabajo",
+      "Atrae oportunidades",
+      "Mantenimiento mensual",
+    ],
+    button: {
+      text: "Escoger Plan",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Ejemplos de Precios</Fragment>
+      <Fragment slot="desc">
+        Elige el plan que mejor se adapte a tus necesidades, o contacta con
+        nosotros para un plan personalizado.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>
