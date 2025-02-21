@@ -19,8 +19,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "[nombre empresa]"
-  : "Inicio | [nombre empresa]";
+  ? title + " | " + "Páginas Perfectas"
+  : "Inicio | Páginas Perfectas";
 ---
 
 <!DOCTYPE html>
@@ -34,14 +34,14 @@ const makeTitle = title
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
-      title=``
+      title=`Páginas Perfectas`
       description="Empresa de desarrollo de software y diseño web en México. Creamos soluciones digitales para tu negocio."
       canonical='https://prueba-mejorada.netlify.app/'
       openGraph={{
         basic: {
           url: 'https://prueba-mejorada.netlify.app/',
           type: "website",
-          title: ``,
+          title:`Páginas Perfectas`,
           image: 'https://raw.githubusercontent.com/CastDev-j/landing-project/refs/heads/maincat/public/opengraph.jpg',
         },
         image: {
