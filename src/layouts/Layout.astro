@@ -4,26 +4,25 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import { ViewTransitions } from "astro:transitions";
 
-
 export interface Props {
   title: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
+// const resolvedImageWithDomain = new URL(
+//   "/opengraph.jpg",
+//   Astro.site
+// ).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title
-  ? title + " | " + "Páginas Perfectas"
-  : "Inicio | Páginas Perfectas";
+// const makeTitle = title
+//   ? title + " | " + "Páginas Perfectas"
+//   : "Inicio | Páginas Perfectas";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,13 +35,14 @@ const makeTitle = title
     <SEO
       title=`Páginas Perfectas`
       description="Empresa de desarrollo de software y diseño web en México. Creamos soluciones digitales para tu negocio."
-      canonical='https://prueba-mejorada.netlify.app/'
+      canonical="https://prueba-mejorada.netlify.app/"
       openGraph={{
         basic: {
-          url: 'https://prueba-mejorada.netlify.app/',
+          url: "https://prueba-mejorada.netlify.app/",
           type: "website",
-          title:`Páginas Perfectas`,
-          image: 'https://raw.githubusercontent.com/CastDev-j/landing-project/refs/heads/maincat/public/opengraph.jpg',
+          title: `Páginas Perfectas`,
+          image:
+            "https://raw.githubusercontent.com/CastDev-j/landing-project/refs/heads/maincat/public/opengraph.jpg",
         },
         image: {
           alt: "Hero",
@@ -52,7 +52,9 @@ const makeTitle = title
   </head>
   <body>
     <Navbar />
-    <slot />
+    <span class="animate-fade animate-once animate-duration-300 animate-ease-in">
+      <slot />
+    </span>
     <Footer />
     <style is:global>
       /* Improve Page speed */

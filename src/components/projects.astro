@@ -1,0 +1,40 @@
+---
+import ProjectCard from "./projectCard.astro";
+
+const projects = [
+  {
+    title: "Diseños Creativos de Uñas",
+    description:
+      "Ofrecemos una amplia variedad de diseños de uñas personalizados para cada ocasión, utilizando productos de alta calidad.",
+    image: "/inicio.png",
+    link: "/projects/nail-designs",
+  },
+  {
+    title: "Portafolio Personal",
+    description:
+      "Explora mi portafolio personal donde muestro mis habilidades y proyectos en desarrollo web, diseño gráfico y más.",
+    image: "/equipo.png",
+    link: "/projects/personal-portfolio",
+  },
+  {
+    title: "Producto Estrella",
+    description:
+      "Descubre nuestra nueva crema hidratante, formulada con ingredientes naturales para mantener tu piel suave y saludable.",
+    image: "/precios.png",
+    link: "/projects/hydrating-cream",
+  },
+];
+---
+
+<div class="mb-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Algunos de nuestros trabajos
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Aquí hay algunos de los proyectos en los que hemos trabajado recientemente.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 my-16 gap-16">
+  {projects.map((project) => <ProjectCard {...project} />)}
+</div>
