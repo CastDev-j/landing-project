@@ -1,5 +1,5 @@
 ---
-import Link from "./ui/link.astro";
+import LinkNoRef from "./ui/linkNoRef.astro";
 
 interface Props {
   title: string;
@@ -12,23 +12,23 @@ const { description, image, link, title } = Astro.props;
 ---
 
 <div class="max-w-sm bg-white border border-slate-200 rounded-lg shadow-sm">
-  <a href={link || "#"} class="block">
+  <p class="block">
     <img class="rounded-t-lg" src={image} alt={title} />
-  </a>
+  </p>
   <div class="p-5">
-    <a href={link || "#"} class="block">
+    <p class="block">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-900">
         {title}
       </h5>
-    </a>
+    </p>
     <p class="mb-3 font-normal text-slate-700">
       {description}
     </p>
 
     <div class="flex mt-8">
-      <Link href={link || "#"} block style={"outline"}>
+      <LinkNoRef href={link || "#"} block style={"outline"}>
         {"Visitar proyecto"}
-      </Link>
+      </LinkNoRef>
     </div>
   </div>
 </div>
